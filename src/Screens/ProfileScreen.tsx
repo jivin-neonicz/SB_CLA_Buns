@@ -1,23 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const ProfileScreen = () => {
     return (
-        <View style={styles.container}>
+       <SafeAreaView>
             <View style={styles.topSection}>
                 <Image
-                    source={require('./assets/images/logo.png')}
+                    source={require('../assets/Images/BunLogo.jpg')}
                     style={styles.logo}
                 />
                 <Text style={styles.HeadText}>Profile</Text>
             </View>
             <View style={styles.line} />
-            <View style={{ paddingVertical: 30 }}>
                 <TouchableOpacity>
-                    <View style={styles.LineCont}>
+                    <View style={styles.LineCont1}>
                         <Icon name="arrow-forward" size={20} color="black" />
-                        <View style={{ paddingRight: 90 }}>
+                        <View style={{ paddingRight: 120 }}>
                             <Text style={styles.LineTxt}>Personal Information</Text>
                         </View>
                         <Icon name="arrow-forward" size={20} color="black" />
@@ -27,7 +26,7 @@ const ProfileScreen = () => {
                 <TouchableOpacity>
                     <View style={styles.LineCont}>
                         <Icon name="arrow-forward" size={20} color="black" />
-                        <View style={{ paddingRight: 90 }}>
+                        <View style={{ paddingRight: 120 }}>
                             <Text style={styles.LineTxt}>Password & security</Text>
                         </View>
                         <Icon name="arrow-forward" size={20} color="black" />
@@ -37,7 +36,7 @@ const ProfileScreen = () => {
                 <TouchableOpacity>
                     <View style={styles.LineCont}>
                         <Icon name="arrow-forward" size={20} color="black" />
-                        <View style={{ paddingRight: 170 }}>
+                        <View style={{ paddingRight: 165}}>
                             <Text style={styles.LineTxt}>Reward history</Text>
                         </View>
                         <Icon name="arrow-forward" size={20} color="black" />
@@ -74,8 +73,7 @@ const ProfileScreen = () => {
                     </View>
                 </TouchableOpacity>
                 <View style={styles.line} />
-            </View>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -91,10 +89,7 @@ const styles = StyleSheet.create({
 
     },
     logo: {
-        width: 80,
-        height: 80,
-        borderRadius: 40,
-        marginRight: 10,
+      margin:5
     },
     HeadText: {
         paddingRight: 130,
@@ -111,10 +106,16 @@ const styles = StyleSheet.create({
         padding: 5
     },
     LineCont: {
-        paddingTop: 25,
+        paddingTop:25,
         paddingHorizontal: 15,
         flexDirection: 'row',
         justifyContent: 'space-between'
+    },
+    LineCont1:{
+        paddingTop:60,
+        paddingHorizontal: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between' 
     },
     LineTxt: {
         color: 'black',

@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 
 const QrScreen = () => {
     return (
-        <View>
+       <SafeAreaView>
             <View style={styles.container}>
                 <View style={styles.shadowContainer}>
                     <Text style={styles.point}>200</Text>
                     <Text style={styles.seprator}>/</Text>
                     <Text style={styles.total}>500</Text>
-                    <Image source={require('./assets/images/coin.png')} style={{ marginLeft: 5 }} />
+                    <Image source={require('../assets/Images/coin.png')} style={{ marginLeft: 5 }} />
                 </View>
             </View>
             <Text style={styles.heading}>Scan to Earn and Redeem Points</Text>
@@ -24,7 +24,7 @@ const QrScreen = () => {
                     </View>
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 

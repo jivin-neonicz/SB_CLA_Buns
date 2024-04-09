@@ -1,7 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
-import LocationScreen from "./src/LocationScreen";
-import QrScreen from "./src/QrScreen";
+import QrScreen from "./src/Screens/QrScreen";
+import PersonalInfo from "./src/Screens/PersonalInfo";
+import RewardHistory from "./src/RewardHistory";
+import HistoryScreen from "./src/RewardHistory";
+
 
 const App =()=>{
   return(
